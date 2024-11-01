@@ -1,0 +1,23 @@
+﻿@model List<ResultCategoryDto>
+@{
+    Layout = null;
+}
+
+<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+
+<div class="container">
+    <br />
+    <table class="table table-bordered">
+    <tr>
+        <td>#</td>
+        <td>Kategori Adı</td>
+    </tr>
+    @foreach(var item in Model)
+        {
+            <tr>
+                <td>@item.CategoryID</td>
+                <td>@item.CategoryName</td>
+            </tr>
+        }
+    </table>
+</div>

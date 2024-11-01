@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MultiShop.DtoLayer.CatalogDtos.CommentDtos
+namespace MultiShop.DtoLayer.CommentDtos
 {
     public class GetByIdCommentDto
     {

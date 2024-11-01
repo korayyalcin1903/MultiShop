@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MultiShop.DtoLayer.CatalogDtos.CommentDtos
+namespace MultiShop.DtoLayer.CommentDtos
 {
-    public class UpdateCommentDto
+    public class ResultCommentDto
     {
         public int UserCommentId { get; set; }
         public string NameSurname { get; set; }

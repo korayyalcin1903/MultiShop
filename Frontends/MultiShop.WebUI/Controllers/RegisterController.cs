@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using MultiShop.DtoLayer.CatalogDtos.IdentityDtos.RegisterDtos;
+using MultiShop.DtoLayer.IdentityDtos.RegisterDtos;
 using Newtonsoft.Json;
 using System.Text;
 
