@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MultiShop.DtoLayer.CatalogDtos.CommentDtos
+namespace MultiShop.DtoLayer.CommentDtos
 {
-    public class CreateCommentDto
+    public class UpdateCommentDto
     {
+        public int UserCommentId { get; set; }
         public string NameSurname { get; set; }
         public string? ImageUrl { get; set; }
         public string Email { get; set; }
