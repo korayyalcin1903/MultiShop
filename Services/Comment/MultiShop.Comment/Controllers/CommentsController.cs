@@ -1,27 +1,27 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using MultiShop.Comment.Context;
 using MultiShop.Comment.Entities;
 
 namespace MultiShop.Comment.Controllers
 {
-    [AllowAnonymous]
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class CommentsController : ControllerBase
     {
         private readonly CommentContext _context;
-
         public CommentsController(CommentContext context)
         {
             _context = context;
         }
 
         [HttpGet]
-        public IActionResult CommentList()
+        public async Task<IActionResult> CommentList()
         {
-            var values = _context.UserComments.ToList();
+            var values = await _context.UserComments.ToListAsync();
             return Ok(values);
         }
 
@@ -57,8 +57,7 @@ namespace MultiShop.Comment.Controllers
             return Ok("Yorum başarıyla güncellendi");
         }
 
-        [HttpGet("CommentListByProductId")]
-
+        [HttpGet("CommentListByProductId/{id}")]
         public IActionResult CommentListByProductId(string id)
         {
             var value = _context.UserComments.Where(x => x.ProductId == id).ToList();

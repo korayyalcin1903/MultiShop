@@ -29,11 +29,11 @@ namespace MultiShop.WebUI.Controllers
 			return View();
 		}
 
-		[HttpPost]
-		public async Task<IActionResult> Index(CreateLoginDto createLoginDto)
-		{
-			return View();
-		}
+		//[HttpPost]
+		//public async Task<IActionResult> Index(CreateLoginDto createLoginDto)
+		//{
+		//	return View();
+		//}
 
         [HttpPost]
         public async Task<IActionResult> Index(SignInDto signInDto)
