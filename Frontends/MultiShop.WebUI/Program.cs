@@ -2,17 +2,12 @@ using IdentityServer4.Models;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using MultiShop.WebUI.Handlers;
-<<<<<<< HEAD
+
 using MultiShop.WebUI.Services.BasketServices;
 using MultiShop.WebUI.Services.CatalogServices.AboutServices;
 using MultiShop.WebUI.Services.CatalogServices.BrandServices;
 using MultiShop.WebUI.Services.CatalogServices.CategoryServices;
 using MultiShop.WebUI.Services.CatalogServices.ContactServices;
-=======
-using MultiShop.WebUI.Services.CatalogServices.AboutServices;
-using MultiShop.WebUI.Services.CatalogServices.BrandServices;
-using MultiShop.WebUI.Services.CatalogServices.CategoryServices;
->>>>>>> 6301d81a493aa5cca2ac1f6b70766572a900c91d
 using MultiShop.WebUI.Services.CatalogServices.FeatureServices;
 using MultiShop.WebUI.Services.CatalogServices.OfferDiscountServices;
 using MultiShop.WebUI.Services.CatalogServices.ProductDetailServices;
@@ -20,13 +15,9 @@ using MultiShop.WebUI.Services.CatalogServices.ProductImageServices;
 using MultiShop.WebUI.Services.CatalogServices.ProductServices;
 using MultiShop.WebUI.Services.CatalogServices.SliderServices;
 using MultiShop.WebUI.Services.CatalogServices.SpecialOfferServices;
-<<<<<<< HEAD
 using MultiShop.WebUI.Services.CommentServices;
 using MultiShop.WebUI.Services.Concrete;
 using MultiShop.WebUI.Services.DiscountServices;
-=======
-using MultiShop.WebUI.Services.Concrete;
->>>>>>> 6301d81a493aa5cca2ac1f6b70766572a900c91d
 using MultiShop.WebUI.Services.Interfaces;
 using MultiShop.WebUI.Settings;
 
@@ -58,7 +49,6 @@ builder.Services.AddHttpContextAccessor();
 builder.Services.AddScoped<ILoginService, LoginService>();
 builder.Services.AddHttpClient<IIdentityService, IdentityService>();
 
-<<<<<<< HEAD
 builder.Services.AddHttpClient();
 builder.Services.AddControllersWithViews();
 
@@ -84,27 +74,6 @@ builder.Services.AddHttpClient<IBasketService, BasketService>(opt =>
 
 // Add services to the container.
 
-=======
-builder.Services.Configure<ClientSettings>(builder.Configuration.GetSection("ClientSettings"));
-builder.Services.Configure<ServiceApiSettings>(builder.Configuration.GetSection("ServiceApiSettings"));
-
-builder.Services.AddScoped<ResourceOwnerPasswordTokenHandler>();
-builder.Services.AddScoped<ClientCredentialTokenHandler>();
-
-builder.Services.AddHttpClient<IClientCredentialTokenService, ClientCredentialTokenService>();
-
-var values = builder.Configuration.GetSection("ServiceApiSettings").Get<ServiceApiSettings>();
-
-builder.Services.AddHttpClient<IUserService, UserService>(opt =>
-{
-    opt.BaseAddress = new Uri(values.IdentityServerUrl);
-}).AddHttpMessageHandler<ResourceOwnerPasswordTokenHandler>();
-
-// Add services to the container.
-builder.Services.AddHttpClient();
-builder.Services.AddControllersWithViews();
-
->>>>>>> 6301d81a493aa5cca2ac1f6b70766572a900c91d
 builder.Services.AddHttpClient<IProductService, ProductService>(opt =>
 {
     opt.BaseAddress = new Uri($"{values.OcelotUrl}/{values.Catalog.Path}");
@@ -130,14 +99,11 @@ builder.Services.AddHttpClient<IFeatureService, FeatureService>(opt =>
     opt.BaseAddress = new Uri($"{values.OcelotUrl}/{values.Catalog.Path}");
 }).AddHttpMessageHandler<ClientCredentialTokenHandler>();
 
-<<<<<<< HEAD
 builder.Services.AddHttpClient<IDiscountService, DiscountService>(opt =>
 {
     opt.BaseAddress = new Uri($"{values.OcelotUrl}/{values.Discount.Path}");
 }).AddHttpMessageHandler<ClientCredentialTokenHandler>();
 
-=======
->>>>>>> 6301d81a493aa5cca2ac1f6b70766572a900c91d
 builder.Services.AddHttpClient<IOfferDiscountService, OfferDiscountService>(opt =>
 {
     opt.BaseAddress = new Uri($"{values.OcelotUrl}/{values.Catalog.Path}");
@@ -163,7 +129,6 @@ builder.Services.AddHttpClient<IProductDetailService, ProductDetailService>(opt 
     opt.BaseAddress = new Uri($"{values.OcelotUrl}/{values.Catalog.Path}");
 }).AddHttpMessageHandler<ClientCredentialTokenHandler>();
 
-<<<<<<< HEAD
 builder.Services.AddHttpClient<IContactService, ContactService>(opt =>
 {
     opt.BaseAddress = new Uri($"{values.OcelotUrl}/{values.Catalog.Path}");
@@ -175,8 +140,6 @@ builder.Services.AddHttpClient<ICommentService, CommentService>(opt =>
 }).AddHttpMessageHandler<ClientCredentialTokenHandler>();
 
 
-=======
->>>>>>> 6301d81a493aa5cca2ac1f6b70766572a900c91d
 
 var app = builder.Build();
 
