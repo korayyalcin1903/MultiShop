@@ -8,12 +8,12 @@ namespace MultiShop.Basket.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class BasketController : ControllerBase
+    public class BasketsController : ControllerBase
     {
         private readonly IBasketService _basketService;
         private readonly ILoginService _loginService;
 
-        public BasketController(IBasketService basketService, ILoginService loginService)
+        public BasketsController(IBasketService basketService, ILoginService loginService)
         {
             _basketService = basketService;
             _loginService = loginService;
@@ -32,7 +32,7 @@ namespace MultiShop.Basket.Controllers
         {
             basketTotalDto.UserId = _loginService.GetUserId;
             await _basketService.SaveBasket(basketTotalDto);
-            return Ok("Sepetteki değişiklikler kaydedildi.");
+            return Ok("Sepetteki değişiklikler kaydedili");
         }
 
         [HttpDelete]
