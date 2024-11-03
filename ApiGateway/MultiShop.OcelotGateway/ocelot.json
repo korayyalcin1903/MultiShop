@@ -108,7 +108,10 @@
         "AuthenticationProviderKey": "OcelotAuthenticationScheme",
         "AllowedScopes": [ "CommentFullPermission" ]
       }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6301d81a493aa5cca2ac1f6b70766572a900c91d
     },
     // Payment
     {

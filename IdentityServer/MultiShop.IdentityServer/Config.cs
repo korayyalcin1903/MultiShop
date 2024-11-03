@@ -57,7 +57,10 @@ namespace MultiShop.IdentityServer
                 AllowedGrantTypes = GrantTypes.ClientCredentials,
                 ClientSecrets = {new Secret("multishopsecret".Sha256())},
                 AllowedScopes = {"CatalogReadPermission", "CatalogFullPermission", "OcelotFullPermission", "CommentFullPermission", "ImagesFullPermission",
+<<<<<<< HEAD
                     "CommentFullPermission", "BasketFullPermission", "DiscountFullPermission",
+=======
+>>>>>>> 6301d81a493aa5cca2ac1f6b70766572a900c91d
                     IdentityServerConstants.LocalApi.ScopeName,
                 }
             },
@@ -70,7 +73,11 @@ namespace MultiShop.IdentityServer
                 AllowedGrantTypes = GrantTypes.ResourceOwnerPassword,
                 ClientSecrets = {new Secret("multishopsecret".Sha256())},
                 AllowedScopes = { "CatalogReadPermission", "CatalogFullPermission", "BasketFullPermission", 
+<<<<<<< HEAD
                     "OcelotFullPermission", "CommentFullPermission", "PaymentFullPermission", "ImagesFullPermission", "DiscountFullPermission",
+=======
+                    "OcelotFullPermission", "CommentFullPermission", "PaymentFullPermission", "ImagesFullPermission",
+>>>>>>> 6301d81a493aa5cca2ac1f6b70766572a900c91d
                         IdentityServerConstants.LocalApi.ScopeName,
                         IdentityServerConstants.StandardScopes.Email,
                         IdentityServerConstants.StandardScopes.OpenId,
@@ -86,7 +93,11 @@ namespace MultiShop.IdentityServer
                 AllowedGrantTypes = GrantTypes.ResourceOwnerPassword,
                 ClientSecrets = {new Secret("multishopsecret".Sha256())},
                 AllowedScopes = { "CatalogFullPermission", "CatalogReadPermission", "DiscountFullPermission", "OrderFullPermission","CargoFullPermission",
+<<<<<<< HEAD
                     "BasketFullPermission", "OcelotFullPermission", "PaymentFullPermission", "ImagesFullPermission", "CommentFullPermission",
+=======
+                    "BasketFullPermission", "OcelotFullPermission", "PaymentFullPermission", "ImagesFullPermission",
+>>>>>>> 6301d81a493aa5cca2ac1f6b70766572a900c91d
                         IdentityServerConstants.LocalApi.ScopeName,
                         IdentityServerConstants.StandardScopes.Email,
                         IdentityServerConstants.StandardScopes.OpenId,

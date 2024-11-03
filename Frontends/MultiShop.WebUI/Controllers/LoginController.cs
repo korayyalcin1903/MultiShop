@@ -29,17 +29,29 @@ namespace MultiShop.WebUI.Controllers
 			return View();
 		}
 
+<<<<<<< HEAD
 		//[HttpPost]
 		//public async Task<IActionResult> Index(CreateLoginDto createLoginDto)
 		//{
 		//	return View();
 		//}
+=======
+		[HttpPost]
+		public async Task<IActionResult> Index(CreateLoginDto createLoginDto)
+		{
+			return View();
+		}
+>>>>>>> 6301d81a493aa5cca2ac1f6b70766572a900c91d
 
         [HttpPost]
         public async Task<IActionResult> Index(SignInDto signInDto)
         {
             await _identityService.SignIn(signInDto);
+<<<<<<< HEAD
             return RedirectToAction("Index", "Default");
+=======
+            return RedirectToAction("Index", "User");
+>>>>>>> 6301d81a493aa5cca2ac1f6b70766572a900c91d
         }
 
 	}
