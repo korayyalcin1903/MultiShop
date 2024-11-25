@@ -35,6 +35,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MultiShop.IdentityServer", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Requirements", "Requirements", "{02312728-CAEE-4982-8DC9-5335BC4C493F}"
 	ProjectSection(SolutionItems) = preProject
+		AdminStatisticApiForUI.txt = AdminStatisticApiForUI.txt
 		LoginIndex.txt = LoginIndex.txt
 		OcelotCodeExample.txt = OcelotCodeExample.txt
 		OselotLink.txt = OselotLink.txt
@@ -88,7 +89,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MultiShop.Images", "Service
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Message", "Message", "{0B8B44B4-1E04-4219-AAC6-F5EB27DED848}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiShop.Message", "Services\Message\MultiShop.Message\MultiShop.Message.csproj", "{ADDD1D51-514E-4AA4-94A0-69FB1CF736DB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MultiShop.Message", "Services\Message\MultiShop.Message\MultiShop.Message.csproj", "{ADDD1D51-514E-4AA4-94A0-69FB1CF736DB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
