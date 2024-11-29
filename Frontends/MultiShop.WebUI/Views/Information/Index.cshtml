@@ -1,0 +1,10 @@
+﻿@using Microsoft.Extensions.Localization
+@inject IViewLocalizer Localizer
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/UILayout/_UILayout.cshtml";
+}
+
+<h1>@Localizer["Merhaba"] bugün @Localizer["Hava"] çok @Localizer["Sıcak"]</h1>
+@ViewBag.Culture
